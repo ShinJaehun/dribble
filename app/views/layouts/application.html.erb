@@ -47,27 +47,27 @@
         <div class="navbar-end">
           <div class="navbar-item">
             <div class="field is-grouped">
-              <%# if user_signed_in? %>
+              <% if user_signed_in? %>
               <p class="control">
-                <%#= link_to new_shot_path, class:"button is-primary"  do %>
+                <%= link_to new_shot_path, class:"button is-primary"  do %>
                   <span class="icon is-small"><i class="fa fa-upload"></i></span>
                   <span>New Shot</span>
-                <%# end %>
+                <% end %>
               </p>
               <p class="control">
-                <%#= link_to current_user.name, edit_user_registration_path, class:"button is-dark" %>
+                <%= link_to current_user.name, edit_user_registration_path, class:"button is-dark" %>
               </p>
               <p class="control">
-                <%#= link_to "Log Out", destroy_user_session_path, method: :delete, class:"button is-dark" %>
+                <%= link_to "Log Out", destroy_user_session_path, method: :delete, class:"button is-dark" %>
               </p>
-              <%# else %>
+              <% else %>
               <p class="control">
-                 <%#= link_to "Sign In", new_user_session_path, class:"button is-dark" %>
+                 <%= link_to "Sign In", new_user_session_path, class:"button is-dark" %>
               </p>
               <p class="control">
-                <%#= link_to "Sign up", new_user_registration_path, class:"button is-dark"%>
+                <%= link_to "Sign up", new_user_registration_path, class:"button is-dark"%>
               </p>
-              <%# end %>
+              <% end %>
             </div>
           </div>
         </div>
