@@ -1,6 +1,7 @@
 class Shot < ApplicationRecord
   belongs_to :user
   has_many :comments, dependent: :destroy
+  is_impressionable
 
   has_one_attached :user_shot
 
